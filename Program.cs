@@ -96,10 +96,33 @@ Console.WriteLine("\n--- Task 2 ---");
             {
                 Console.WriteLine("No Match");
             }
-        
+            ///Task8\\\\\\\\\\\\
+            Console.WriteLine("\n--- Task 8 ---");
+            try
+            {
+                Console.Write("Enter membership start date (yyyy-MM-dd): ");
+                DateTime startDate = DateTime.Parse(Console.ReadLine());
 
+                Console.Write("Enter membership days: ");
+                int days = Convert.ToInt32(Console.ReadLine());
 
+                DateTime expiryDate = startDate.AddDays(days);
 
+                if (expiryDate >= DateTime.Today)
+                {
+                    Console.WriteLine("Membership Status: Active");
+                }
+                else
+                {
+                    Console.WriteLine("Membership Status: Expired");
+                }
+
+                Console.WriteLine("Expiry Date: " + expiryDate.ToString("yyyy-MM-dd"));
+            }
+            catch
+            {
+                Console.WriteLine("Invalid input.");
+            }
 
 
 

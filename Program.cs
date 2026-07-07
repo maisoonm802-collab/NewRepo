@@ -31,6 +31,17 @@ Console.WriteLine("\n--- Task 2 ---");
             Console.WriteLine("Uppercase: " + name.ToUpper());
             Console.WriteLine("Lowercase: " + name.ToLower());
             Console.WriteLine("Character Count: " + name.Length);
+            ///Task4\\\\\\\\\\\\
+            Console.WriteLine("\n--- Task 4 ---");
+            Console.Write("Enter free trial days: ");
+            int days = Convert.ToInt32(Console.ReadLine());
+
+            DateTime today = DateTime.Today;
+            DateTime endDate = today.AddDays(days);
+
+            Console.WriteLine("Trial End Date: " + endDate.ToString("yyyy-MM-dd"));
+
+
 
 
 

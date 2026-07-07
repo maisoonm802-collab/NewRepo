@@ -57,10 +57,29 @@ Console.WriteLine("\n--- Task 2 ---");
             {
                 Console.WriteLine("Result: Fail");
             }
+            ///Task6\\\\\\\\\\\\
+            Console.WriteLine("\n--- Task 6 ---");
+            Console.Write("Enter your password: ");
+            string password = Console.ReadLine();
 
+            if (password.Length >= 8 && !password.ToLower().Contains("password"))
+            {
+                Console.WriteLine("Strong Password");
+            }
+            else
+            {
+                Console.WriteLine("Weak Password");
 
+                if (password.Length < 8)
+                {
+                    Console.WriteLine("Reason: Less than 8 characters.");
+                }
 
-
+                if (password.ToLower().Contains("password"))
+                {
+                    Console.WriteLine("Reason: Contains the word 'password'.");
+                }
+            }
 
 
 
